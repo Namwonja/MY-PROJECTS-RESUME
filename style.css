@@ -1,0 +1,227 @@
+*{
+    margin:0;
+    padding:0;
+    
+}
+body{
+    background-image:linear-gradient(100deg, #06060D,#8B4513, #b85729 );
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+
+.navbar_links {
+    position: absolute; 
+    right: 20px;
+    top: 20px; /* Adjust spacing from the top edge */
+    font-size: 20px;
+}
+.navbar_links ul{
+    display: flex; 
+    list-style: none; 
+}
+.navbar_links li{
+    margin-left: 40px; 
+    margin-right: 20px; 
+}
+.navbar_links a{
+    color: white;
+    
+}
+.navbar_links a:hover{
+    color: #040404;
+}
+.home_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.home_content{
+    margin-left: 80px;
+    
+}
+.home_content_h1{
+   background: linear-gradient(45deg, #FF2CDF, #0014FF);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+    
+    margin-bottom: 14px;
+    font-size: 25px;
+    
+}
+.home_content_p{
+    color: white;
+    line-height: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.home_content_button{
+    margin-top: 40px;
+    border-radius: 25px;
+    border: 2px solid black;
+    font-weight: 800;
+    width: 100px;
+    font-size: 17px;
+    color:whitesmoke;
+    background-image:linear-gradient(100deg, #8B4513,#06060D );
+    box-shadow: 2px 2px 5px black;
+}
+.home_image{
+    border-radius: 280px;
+    border: 30px solid white;
+    margin-top: 60px;
+}
+.section-2{
+    
+    margin-left: 50px;
+    
+}
+.section-2-boxes{
+    display: flex;
+    padding: 30px;
+    
+}
+.section-2-box{
+    border-radius: 30px;
+    border: 2px solid white;
+    box-shadow: 2px 2px 3px black, 2px 2px 3px whitesmoke ;
+    
+    width: 230px;
+    height: 150px;
+    padding: 20px;
+    margin: 30px;    
+    
+}
+.section-2-box h4{
+    font-size: 22px;
+    
+    background: linear-gradient(45deg, #8B4513, #06060D,#b85729);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.section-2-box ul{
+    line-height: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.section-3{
+    
+    margin-left: 50px;
+    
+}
+.section-3-boxes{
+    display: flex;
+    padding: 30px;
+    
+}
+.section-3-box{
+    border-radius: 30px;
+    border: 2px solid white;
+    box-shadow: inset 3px 3px 3px #b85729, 
+                inset 2px 2px 3px #040404,   
+                inset 2px 2px 3px #FF2CDF; 
+    width: 230px;
+    height: 150px;
+    padding: 20px;
+    margin: 30px
+}
+.section-4{
+    background-image:linear-gradient(100deg, #06060D,#8B4513, #b85729 );
+    background-size: cover;
+    background-position: center;
+    height: 1150px;
+    background-repeat: no-repeat;
+
+}
+.section-4-container-main{
+    margin-left: 30px;
+    color: #ffffff;
+}
+.section-4-container-all-skils{
+    display: flex;
+    margin: 30px;
+    padding-left: 40px;
+}
+.section-4-container-individual-skill{
+    margin: 50px;
+}
+.img-js{
+    margin-top: 15px;
+    width: 100px;
+    border-radius: 50px;
+}
+.skills-paragraph{
+    text-align: center;
+}
+.contact-section{
+    color: white;
+    margin-left: 50px;
+}
+.contact-outer-box{
+    margin-left: 20px;
+    margin-top: 50px;
+    
+}
+.contact-main-box{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: white;
+    width: 450px;
+    line-height: 50px;
+    padding-left: 15px;
+    color: black;
+}
+.contact-input{
+    width: 95%;
+    border: hidden;
+    border-bottom: 3px solid rgb(7, 7, 7);
+}
+.contact-message-area{
+    width: 95%;
+    height: 100px;
+    border-radius: 10px;
+    border: 2px solid white;
+    box-shadow: inset 3px 3px 3px #ffffff, 
+                inset 2px 2px 3px #040404,   
+                inset 2px 2px 3px #FF2CDF; 
+    
+    
+}
+.contact-submit{
+    margin-left: 180px;
+    font-weight: 700;
+    font-size: 25px;
+    border-radius: 20px;
+    border: 1px solid white;
+    width: 90px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    background-image:linear-gradient(90deg, #8B4513, #06060D );
+    
+}
+.table-footer{
+    margin-left: 400px;
+}
+.table-footer-caption{
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.footer-table-tr{
+    padding-top: 20px;
+    margin-top: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+th, td {
+    padding: 25px;
+    text-align: center;
+}
+.footer-table-image img{
+    width: 50px;
+    border-radius: 30px;
+}
+.footer-table-paragraph{
+    margin-left: 535px;
+}
