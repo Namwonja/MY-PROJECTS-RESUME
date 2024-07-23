@@ -2,16 +2,20 @@
 <head>
     <title>pascali/portfolio</title>
     <link rel="stylesheet" href="style.css">
+    
+    
 </head>
 <body>
-    <section class="section_one">
+    <section class="section_one" id="home">
 
-        <nav class="navbar_links">
+        <nav class="navbar_links" >
+            
             <ul>
-                <li><a href="#">Home</a></li>
+                <img src="images/plogo.png" alt="logo" class="logo">
+                <li><a href="#home">Home</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#project">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <div class="home_container">
@@ -20,7 +24,9 @@
                 <p class="home_content_p">Hello, I'm Pascalia, a Kenyan full stack developer who craft<br> solutions with code that bridge
                     the gap between imagination <br>and user interaction.
                 </p>
-                <button type="button" class="home_content_button">HIRE ME</button>
+                <a href="https://www.linkedin.com/in/pascalia" target="_blank">
+                    <button type="button" class="home_content_button">HIRE ME</button>
+                </a>
             </div>
             
             <div  >
@@ -32,52 +38,54 @@
     </section>
 
     <section class="section-2">
-        <h1 class="section-2-h1"><u>What I Do</u></h1>
-        <p>My services.</p>
-        <div class="section-2-boxes">
-            <div class="section-2-box">
-                <h4>Web Development</h4>
-                <ul>
-                    <li>Responsive design.</li>
-                    <li>Web maintenance.</li>
-                    <li>SEO Optimization.</li>
-                </ul>
-            </div>
+        <div>
+            <h1 class="section-2-h1"><u>What I Do</u></h1>
+            <p>My services.</p>
+            <div class="section-2-boxes">
+                <div class="section-2-box reveal-left">
+                    <h4>Web Development</h4>
+                    <ul>
+                        <li>Responsive design.</li>
+                        <li>Web maintenance.</li>
+                        <li>SEO Optimization.</li>
+                    </ul>
+                </div>
 
-            <div class="section-2-box">
-                <h4>Front-end Development</h4>
-                <ul>
-                    <li>Implementing UX/UI design.</li>
-                    <li>Implementing using React.</li>
-                    <li>Performance Optimization.</li>
-                </ul>
-            </div>
+                <div class="section-2-box reveal-rotate">
+                    <h4>Front-end Development</h4>
+                    <ul>
+                        <li>Implementing UX/UI design.</li>
+                        <li>Implementing using React.</li>
+                        <li>Performance Optimization.</li>
+                    </ul>
+                </div>
 
-            <div class="section-2-box">
-                <h4>Back-end Development.</h4>
-                <ul>
-                    <li>Writing server-side codes.</li>
-                    <li>Database management.</li>   
-                </ul>
+                <div class="section-2-box reveal-right">
+                    <h4>Back-end Development.</h4>
+                    <ul>
+                        <li>Writing server-side codes.</li>
+                        <li>Database management.</li>   
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="section-3">
+    <section class="section-3" id="project">
         <h2 class="section-3-h2"><u>Projects</u></h2>
         <p>What I've developed.</p>
         <div class="section-3-boxes">
-            <div class="section-3-box">
+            <div class="section-3-box reveal-top">
                 <h3>Project 1</h3>
                 
             </div>
 
-            <div class="section-3-box">
+            <div class="section-3-box reveal-top">
                 <h3>Project 2</h3>
                 
             </div>
 
-            <div class="section-3-box">
+            <div class="section-3-box reveal-top">
                 <h3>Project 3</h3>
                 
             </div>
@@ -140,26 +148,27 @@
         
         </div>
 
-        <div class="contact-section">
-                
-            <h2 class="contact-h2">Contact.</h2>
-            <p>Let's chat</p>
-            <div class="contact-outer-box">
-                <div >
-                    <form action=""class="contact-main-box">
-                        <p><label for="name">Name</label></p>
-                        <p><input type="text" class="contact-input"></p>
-    
-                    <p><label for="email">Email</label></p>
-                    <p><input type="email" class="contact-input"></p>
-    
-                    <p><label for="message">Message</label></p>
-                    <p> <input type="text" class="contact-message-area"></p>
-    
-                    <p><button type="submit" class="contact-submit">SEND</button></p>
-                    </form>
+        <div class="contact-section" >
+           <div class="container-border">   
+                <h2 class="contact-h2" id = "contact">Contact.</h2>
+                <p>Let's chat</p>
+                <div class="contact-outer-box">
+                    <div >
+                        <form action="main.php" method="POST" class="contact-main-box">
+                            <p><label for="name">Name</label></p>
+                            <p><input type="text" name="name" class="contact-input"></p>
+        
+                        <p><label for="email">Email</label></p>
+                        <p><input type="email" name="email" class="contact-input" required></p>
+        
+                        <p><label for="message">Message</label></p>
+                        <p> <input type="text" name="message" class="contact-message-area" required></p>
+        
+                        <p><button type="submit" class="contact-submit">SEND</button></p>
+                        </form>
+                    </div>
                 </div>
-            </div>
+            </div>  
         </div>
     </section>
 
@@ -187,5 +196,9 @@
             <p class="footer-table-paragraph">© Copyright All Right Reserved 2024</p>
         </footer>
     </section>
+    
+    <script src="myjs.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
 </body>
 </html>

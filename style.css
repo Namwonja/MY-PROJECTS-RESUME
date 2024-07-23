@@ -3,14 +3,13 @@
     padding:0;
     
 }
-body{
-    background-image:linear-gradient(100deg, #06060D,#8B4513, #b85729 );
+.section_one{
+    background-image:linear-gradient(100deg, #8B4513, #b85729 );
     background-size: cover;
     background-position: center;
     height: 100vh;
     background-repeat: no-repeat;
 }
-
 .navbar_links {
     position: absolute; 
     right: 20px;
@@ -24,11 +23,41 @@ body{
 .navbar_links li{
     margin-left: 40px; 
     margin-right: 20px; 
+    position: relative;
+}
+
+.logo{
+    width: 105px;
+    height: 105px;
+    border-radius: 30px;
+    margin-right: 480px;
 }
 .navbar_links a{
     color: white;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+}
+
+.navbar_links a::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
+    border: 2px solid #f8f8f8; /* Thin line circle color */
+    border-radius: 50%;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s;
     
 }
+
+.navbar_links a:hover::before {
+    opacity: 1;
+}
+
 .navbar_links a:hover{
     color: #040404;
 }
@@ -36,20 +65,17 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    padding: 10px;
 }
 
 .home_content{
-    margin-left: 80px;
+    margin-left: 60px;
     
 }
 .home_content_h1{
-   background: linear-gradient(45deg, #FF2CDF, #0014FF);
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
-    
+   color: white;
     margin-bottom: 14px;
-    font-size: 25px;
+    font-size: 30px;
     
 }
 .home_content_p{
@@ -65,17 +91,24 @@ body{
     width: 100px;
     font-size: 17px;
     color:whitesmoke;
-    background-image:linear-gradient(100deg, #8B4513,#06060D );
+    background-color:black;
     box-shadow: 2px 2px 5px black;
 }
+
+.home_content_button:hover{
+    color: #94591C;
+}
+
 .home_image{
-    border-radius: 280px;
-    border: 30px solid white;
+    border-radius: 800px;
+    border: 40px solid white;
     margin-top: 60px;
+    margin-right: 50px;
 }
 .section-2{
-    
+    padding-top: 70px;
     margin-left: 50px;
+    background-color: white;
     
 }
 .section-2-boxes{
@@ -96,11 +129,9 @@ body{
 }
 .section-2-box h4{
     font-size: 22px;
-    
-    background: linear-gradient(45deg, #8B4513, #06060D,#b85729);
+    background-image: linear-gradient(45deg, #8B4513, #b85729 );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
 }
 .section-2-box ul{
     line-height: 35px;
@@ -129,7 +160,7 @@ body{
     margin: 30px
 }
 .section-4{
-    background-image:linear-gradient(100deg, #06060D,#8B4513, #b85729 );
+    background-image:linear-gradient(100deg, #8B4513, #b85729 );
     background-size: cover;
     background-position: center;
     height: 1150px;
@@ -153,15 +184,33 @@ body{
     width: 100px;
     border-radius: 50px;
 }
+
+.img-js{
+    position: relative;
+    display: inline-block;
+    padding: 5px;
+    transition: all 0.6s ease-in-out;
+    transform-origin: center;
+}
+
+.img-js:hover {
+    border-radius: 50%;
+    background-color: white;
+    padding: 20px;
+    transform: rotate(360deg);
+}
 .skills-paragraph{
     text-align: center;
+
 }
+
 .contact-section{
     color: white;
     margin-left: 50px;
 }
+
 .contact-outer-box{
-    margin-left: 20px;
+    margin-left: 250px;
     margin-top: 50px;
     
 }
@@ -177,17 +226,21 @@ body{
     width: 95%;
     border: hidden;
     border-bottom: 3px solid rgb(7, 7, 7);
+    font-size: 18px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .contact-message-area{
     width: 95%;
     height: 100px;
+    font-size: 18px;
     border-radius: 10px;
     border: 2px solid white;
     box-shadow: inset 3px 3px 3px #ffffff, 
                 inset 2px 2px 3px #040404,   
                 inset 2px 2px 3px #FF2CDF; 
     
-    
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
 }
 .contact-submit{
     margin-left: 180px;
@@ -198,7 +251,7 @@ body{
     width: 90px;
     font-family: 'Courier New', Courier, monospace;
     color: white;
-    background-image:linear-gradient(90deg, #8B4513, #06060D );
+    background-color: black;
     
 }
 .table-footer{
@@ -225,3 +278,4 @@ th, td {
 .footer-table-paragraph{
     margin-left: 535px;
 }
+
