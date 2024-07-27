@@ -1,20 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
 *{
     margin:0;
     padding:0;
     
+    
 }
 .section_one{
-    background-image:linear-gradient(100deg, #8B4513, #b85729 );
+   /* background-image:linear-gradient(100deg, #8B4513, #b85729 );*/
+   background-color: #8B4513;
     background-size: cover;
     background-position: center;
     height: 100vh;
     background-repeat: no-repeat;
 }
 .navbar_links {
-    position: absolute; 
-    right: 20px;
+    
+    position: fixed; 
+    width: 100%;
     top: 20px; /* Adjust spacing from the top edge */
-    font-size: 20px;
+    font-size: 23px;
+    background: transparent; /* Default background */
+    backdrop-filter: blur(10px); /* Initial blur effect */
+    transition: background 0.3s, backdrop-filter 0.3s; /* Smooth transition */
+    z-index: 1000; /* Ensure it's above other content */
+    padding: 10px 20px;
+}
+#navbar.scrolled {
+    background-color: rgba(64, 63, 63, 0.8); /* Change background color when scrolled */
 }
 .navbar_links ul{
     display: flex; 
@@ -27,17 +40,19 @@
 }
 
 .logo{
-    width: 105px;
-    height: 105px;
+    width: 98px;
+    height: 60px;
     border-radius: 30px;
-    margin-right: 480px;
+    margin-right: 440px;
 }
 .navbar_links a{
-    color: white;
+    
+    color: #dcdada;
     text-decoration: none;
     position: relative;
     display: inline-block;
     padding: 10px;
+    font-family: Montserrat;
 }
 
 .navbar_links a::before {
@@ -59,8 +74,10 @@
 }
 
 .navbar_links a:hover{
-    color: #040404;
+    color: #0b1c0c;
 }
+
+
 .home_container{
     display: flex;
     align-items: center;
@@ -70,29 +87,40 @@
 
 .home_content{
     margin-left: 60px;
-    
+    max-width: 50%;
 }
 .home_content_h1{
    color: white;
     margin-bottom: 14px;
-    font-size: 30px;
-    
+    font-size: 29px;
+    line-height: 1.2;
+    text-align: left;
+    font-family: Montserrat;
+    text-shadow: 2px 2px 5px #122b13;
+}
+
+.home_content_h1_highlight{
+    color:#0f2010;
+    font-size: 35px;
 }
 .home_content_p{
     color: white;
-    line-height: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    font-family: Lato;
+    
 }
 .home_content_button{
     margin-top: 40px;
     border-radius: 25px;
-    border: 2px solid black;
+    border: 2px solid #0b1c0c;
     font-weight: 800;
-    width: 100px;
-    font-size: 17px;
-    color:whitesmoke;
-    background-color:black;
+    width: 130px;
+    font-size: 26px;
+    color:white;
+    background-color:#0b1c0c;
     box-shadow: 2px 2px 5px black;
+    text-align: center;
+    font-family: Montserrat;
 }
 
 .home_content_button:hover{
@@ -102,14 +130,22 @@
 .home_image{
     border-radius: 800px;
     border: 40px solid white;
-    margin-top: 60px;
-    margin-right: 50px;
+    margin-top: 90px;
+    width: 470px;
+    height: 470px;
 }
 .section-2{
-    padding-top: 70px;
-    margin-left: 50px;
+    padding-top: 100px;
+    margin-left: 30px;
     background-color: white;
+    color:#0f2010;
     
+}
+.section-2-h1{
+    font-family: Montserrat;
+}
+.section-2 p{
+    font-family: Lato;
 }
 .section-2-boxes{
     display: flex;
@@ -120,145 +156,356 @@
     border-radius: 30px;
     border: 2px solid white;
     box-shadow: 2px 2px 3px black, 2px 2px 3px whitesmoke ;
-    
-    width: 230px;
+    width: 250px;
     height: 150px;
     padding: 20px;
-    margin: 30px;    
+    margin: 45px;    
     
 }
 .section-2-box h4{
-    font-size: 22px;
+    font-size: 19px;
     background-image: linear-gradient(45deg, #8B4513, #b85729 );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-family: Montserrat;
+    
 }
 .section-2-box ul{
     line-height: 35px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Lato;
+    font-size: 18px;
 }
 
-.section-3{
-    
-    margin-left: 50px;
+
+
+/*SECTION FOUR */
+
+.section-4-container-main {
+    margin-left: 30px;
+    color: #0b1c0c;
+}
+
+.section-4-h2 {
+    font-family: Montserrat;
+}
+
+.section-4 {
+    font-family: Lato;
+}
+
+.section-4-container-all-skills {
+    display: flex;
+    margin: 30px;
     
 }
-.section-3-boxes{
+
+.section-4-container-individual-skill {
+    margin: 40px;
+}
+
+
+
+
+
+.skills-paragraph {
+    margin-left: 45px;
+    font-size: 19px;
+}
+
+.sphere {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px 10px 0px 175px;
+    background-size: 120px;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: turn 2s ease-out 0s infinite;
+    z-index: 10;
+    position: relative;
+    margin-left: 30px;
+    
+
+    
+    
+}
+
+
+
+
+@keyframes turn {
+    0%, 100% {
+        background-position: 20% 70%;
+    }
+    50% {
+        background-position: 80% 70%;
+    }
+}
+
+.shadow {
+    z-index: 1;
+    position: relative;
+    margin-top: -30px;
+    width: 100px;
+    height: 50px;
+    background: radial-gradient(#000f, #fff0 72%);
+    border-radius: 50%;
+    margin-left: 30px;
+}
+
+
+
+
+
+
+.section-benefit{
+    padding-top: 130px;
+    margin-left: 50px;
+    background-color: white;
+    color:#0f2010;
+    
+}
+
+.section-benefit-boxes{
     display: flex;
     padding: 30px;
     
 }
-.section-3-box{
-    border-radius: 30px;
-    border: 2px solid white;
-    box-shadow: inset 3px 3px 3px #b85729, 
-                inset 2px 2px 3px #040404,   
-                inset 2px 2px 3px #FF2CDF; 
-    width: 230px;
-    height: 150px;
-    padding: 20px;
-    margin: 30px
+.section-benefit p{
+    font-family: Lato;
 }
-.section-4{
+.section-benefit-box{
+    width: 380px;
+    height: 270px;
+    padding: 15px;
+    margin: 30px;
+    color: white;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  padding: 20px;
+  text-align: center;
+     
+}
+.section-benefit-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+.section-benefit-box h4{
+    font-size: 18px;
+    padding-top: 10px;
+    background-image: linear-gradient(45deg, #8B4513, #b85729 );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Montserrat;
+    
+    
+}
+.cube-h2{
+    margin-top: 70px;
+}
+.section-benefit-box p{
+    line-height: 25px;
+    color: #0b1c0c;
+    font-size: 17px;
+    font-family: Lato;
+}
+
+.benefits_image{
+    width: 100%;
+    height: 70%; /* Adjust the height to fit the image in the top part */
+    object-fit: cover;
+    border-radius: 30px 30px 0 0; /* Round the top corners of the image */
+
+}
+
+.cube {
+    width: 100px; /* Increased size */
+    height: 100px; /* Increased size */
+    position: relative;
+    transform-style: preserve-3d;
+    animation: spin 3s linear infinite;
+}
+
+.face {
+    width: 100px; /* Increased size */
+    height: 100px; /* Increased size */
+    position: absolute;
+    opacity: 0.8;
+}
+.front {
+    transform: translateZ(50px); /* Adjusted for new size */
+    background-color: #0b1c0c;
+}
+.back {
+    transform: translateZ(-50px); /* Adjusted for new size */
+    background-color: #b85729;
+}
+.left {
+    transform: rotateY(90deg) translateZ(50px); /* Adjusted for new size */
+    background-color: white;
+}
+.right {
+    transform: rotateY(-90deg) translateZ(50px); /* Adjusted for new size */
+    background-color: #1c411f;
+}
+.top {
+    transform: rotateX(90deg) translateZ(50px); /* Adjusted for new size */
+    background-color: #94591C;
+}
+.bottom {
+    transform: rotateX(-90deg) translateZ(50px); /* Adjusted for new size */
+    background-color: #e67e22;
+}
+@keyframes spin {
+    0% {
+        transform: rotateX(0) rotateY(0) rotateZ(0);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+}
+.outer-contact-section{
     background-image:linear-gradient(100deg, #8B4513, #b85729 );
     background-size: cover;
     background-position: center;
-    height: 1150px;
+    height: 600px;
     background-repeat: no-repeat;
-
-}
-.section-4-container-main{
-    margin-left: 30px;
-    color: #ffffff;
-}
-.section-4-container-all-skils{
-    display: flex;
-    margin: 30px;
-    padding-left: 40px;
-}
-.section-4-container-individual-skill{
-    margin: 50px;
-}
-.img-js{
-    margin-top: 15px;
-    width: 100px;
-    border-radius: 50px;
 }
 
-.img-js{
+/* SECTION FEATURES*/
+
+.container {
     position: relative;
-    display: inline-block;
-    padding: 5px;
-    transition: all 0.6s ease-in-out;
-    transform-origin: center;
 }
-
-.img-js:hover {
-    border-radius: 50%;
-    background-color: white;
-    padding: 20px;
-    transform: rotate(360deg);
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
 }
-.skills-paragraph{
-    text-align: center;
+.line {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: #333;
+    left: 50%;
+    top: 0;
+    
 
-}
-
-.contact-section{
-    color: white;
-    margin-left: 50px;
-}
-
-.contact-outer-box{
-    margin-left: 250px;
-    margin-top: 50px;
     
 }
-.contact-main-box{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.section {
+    position: relative;
+    margin: 50px 0;
+}
+.bead {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #333;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 60px;
+}
+.content {
+    margin: 140px;
+    position: relative;
+    width: 350px;
+    padding: 20px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.section:nth-child(odd) .content {
+    left: 45%; 
+}
+.section:nth-child(even) .content {
+    left: -5%;
+}
+.section-feature-h1, .section-feature-p{
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+
+/*CONTACT SECTION*/
+
+.contact-section {
+    color: white;
+    margin-left: 30px;
+    
+}
+.contact-h2{
+    padding-top: 20px;
+    font-family: Montserrat;
+}
+.contact-section{
+    font-family: Lato;
+}
+.contact-outer-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.contact-main-box {
+    font-family: Lato;
     background-color: white;
     width: 450px;
     line-height: 50px;
-    padding-left: 15px;
+    padding: 15px;
     color: black;
 }
-.contact-input{
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.contact-input,
+.contact-message-area {
     width: 95%;
     border: hidden;
     border-bottom: 3px solid rgb(7, 7, 7);
     font-size: 18px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Lato;
+    margin-top: 10px;
+    padding: 10px;
 }
-.contact-message-area{
-    width: 95%;
+
+.contact-message-area {
     height: 100px;
-    font-size: 18px;
     border-radius: 10px;
     border: 2px solid white;
     box-shadow: inset 3px 3px 3px #ffffff, 
                 inset 2px 2px 3px #040404,   
                 inset 2px 2px 3px #FF2CDF; 
-    
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
 }
-.contact-submit{
-    margin-left: 180px;
+
+.contact-submit {
+    display: block;
+    margin: 0 auto;
     font-weight: 700;
     font-size: 25px;
     border-radius: 20px;
     border: 1px solid white;
-    width: 90px;
-    font-family: 'Courier New', Courier, monospace;
+    width: 100px;
+    font-family: Montserrat;
     color: white;
     background-color: black;
-    
 }
+
+.contact-submit:hover{
+    background-color: #b85729;
+}
+
 .table-footer{
     margin-left: 400px;
 }
 .table-footer-caption{
-    margin-top: 10px;
+    margin-top: 40px;
     margin-bottom: 40px;
 }
 .footer-table-tr{
@@ -279,3 +526,13 @@ th, td {
     margin-left: 535px;
 }
 
+/* 
+homepage is a sales page
+value preposition - why should i watch this. why should i read more. what's in for me.
+social proof - who  have used your company
+benefits - they only care, the flower will make them grow.e.g 
+we have a todo list which has features like remiders. they don't care about that. say you never miss a
+deadline again, you gona have more free time.
+features - this is how we do it for you
+call of action - what do you want people to do.
+seo - links to other pages

@@ -1,0 +1,278 @@
+<!--DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating Sphere</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            overflow: hidden;
+            padding-top: 100px;
+        }
+
+        .sphere {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 10px 10px 0px 175px;
+            background: 
+                radial-gradient(
+                    #8B4513,
+                    #ec0707
+                );
+            background-size: 200% 200%;
+            z-index: 10;
+            position: relative;
+            
+           
+            
+            
+        }
+
+        .sphere:hover {
+            animation: turn 1s ease-out infinite;
+        }
+
+        @keyframes turn {
+            0%, 100% {
+                background-position: 20% 70%;
+            }
+            50% {
+                background-position: 80% 70%;
+            }
+        }
+
+        .shadow {
+            z-index: 1;
+            position: relative;
+            margin-top: -30px;
+            width: 100px;
+            height: 50px;
+            background:
+                radial-gradient(
+                    #000f,
+                    #fff0 72%
+                );
+            border-radius: 50%;
+            margin-left: 180px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sphere"></div>
+    <div class="shadow"></div>
+</body>
+</html -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features Timeline</title>
+    <style>
+        .container {
+            position: relative;
+        }
+        .timeline {
+            position: relative;
+            margin: 0 auto;
+            padding: 0;
+            list-style: none;
+        }
+        .line {
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            background: #333;
+            left: 50%;
+            top: 0;
+            
+        
+            
+        }
+        .section {
+            position: relative;
+            margin: 50px 0;
+        }
+        .bead {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #333;
+            border-radius: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 60px;
+        }
+        .content {
+            margin: 140px;
+            position: relative;
+            width: 350px;
+            padding: 20px; 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .section:nth-child(odd) .content {
+            left: 45%; 
+        }
+        .section:nth-child(even) .content {
+            left: -5%;
+        }
+        .section-feature-h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .section-feature p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="section-feature-h1"><u>Features</u></h1>
+        
+        <div class="container">
+            <div class="timeline">
+                <div class="line"></div>
+                <div class="section">
+                    <div class="bead"></div>
+                    <div class="content reveal-left">
+                        <h4>Gather Requirements</h4>
+                        <p>We document all necessary details, features, and functionalities you want on your website.</p>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="bead"></div>
+                    <div class="content reveal-right">
+                        <h4>Conceptualization</h4>
+                        <p>A rough sketch is created to visualize how the website will flow and how users will navigate through it.</p>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="bead"></div>
+                    <div class="content reveal-left">
+                        <h4>Design Mock-ups</h4>
+                        <p>Display several layout options showcasing different styles, and you choose the final layout.</p>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="bead"></div>
+                    <div class="content reveal-right">
+                        <h4>Development</h4>
+                        <p>Brings to life the design, ensuring responsiveness, functionality, and user-friendliness.</p>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="bead"></div>
+                    <div class="content reveal-left">
+                        <h4>Review</h4>
+                        <p>Any corrections or adjustments you request are promptly addressed and implemented.</p>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="bead"></div>
+                    <div class="content reveal-right">
+                        <h4>Final Delivery</h4>
+                        <p>Delivers the polished and fully functional website.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include ScrollReveal JS -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        function revealFunction() {
+            window.sr = ScrollReveal({ 
+                duration: 1350, 
+                distance: '250px', 
+                easing: 'ease-out' 
+            });
+            
+            // Reveal line
+            sr.reveal('.line', {
+                origin: 'top',
+                distance: '100%', // Make it appear as it grows in height
+                scale: 1, // Scale to full height
+                reset: true
+            });
+
+            // Reveal content
+            sr.reveal('.reveal-left', {
+                origin: 'left',
+                reset: true
+            });
+
+            sr.reveal('.reveal-right', {
+                origin: 'right',
+                reset: true
+            });
+        }
+
+        window.addEventListener('load', () => {
+            revealFunction();
+        });
+    </script>
+</body>
+</html>
+
+<!--
+<section class="section-3" id="project">
+        <h2 class="section-3-h2"><u>Projects</u></h2>
+        <p>What I've developed.</p>
+        <div class="section-3-boxes">
+            <div class="section-3-box reveal-top">
+                <h3>Project 1</h3>
+                
+            </div>
+
+            <div class="section-3-box reveal-top">
+                <h3>Project 2</h3>
+                
+            </div>
+
+            <div class="section-3-box reveal-top">
+                <h3>Project 3</h3>
+                
+            </div>
+        </div>
+    </section>
+
+
+    
+.section-3{
+    margin-top: 100px;
+    margin-left: 50px;
+    
+}
+.section-3-h2{
+    font-family: Montserrat;
+}
+.section-3 p{
+    font-family: Lato;
+}
+.section-3-boxes{
+    display: flex;
+    padding: 30px;
+    
+}
+.section-3-box{
+    border-radius: 30px;
+    border: 2px solid white;
+    box-shadow: inset 3px 3px 3px #b85729, 
+                inset 2px 2px 3px #040404,   
+                inset 2px 2px 3px #FF2CDF; 
+    width: 230px;
+    height: 150px;
+    padding: 20px;
+    margin: 50px
+}
+-->
